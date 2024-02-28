@@ -1,4 +1,4 @@
-This is a  project which is the clone of Youtube using Java and Xml 
+# This is a  project which is the clone of Youtube using Java and Xml 
 # Its fully developed using Native ui of android 
 
 which has has the functionalitys like 
