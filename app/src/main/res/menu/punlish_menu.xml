@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/progress_bar_item"
+        android:title="progress_bar"
+        android:visible="false"
+        app:actionViewClass="android.widget.ProgressBar"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/save_btn_item"
+        android:title="  Save  "
+        app:showAsAction="always" />
+</menu>

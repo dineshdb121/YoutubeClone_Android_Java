@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxHeight="46dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tool_profile_menu_contain"
+        android:layout_width="46dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="6dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintTop_toTopOf="0">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/tool_profile_menu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0"
+            app:shapeAppearance="@style/roundimageview"
+            app:srcCompat="@drawable/dktimg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_close_image"
+        android:layout_width="46dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toStartOf="@+id/tool_profile_menu_contain"
+        app:layout_constraintTop_toTopOf="0">
+
+        <ImageView
+            android:id="@+id/profile_close_imgview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0"
+            app:srcCompat="@drawable/search" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tool_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blogbite"
+        android:textAppearance="@style/Toolbar_TitleText"
+        android:textColor="?attr/colorOnSecondary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

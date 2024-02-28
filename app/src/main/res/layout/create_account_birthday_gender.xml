@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/creatr_account_birthday_gender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0">
+
+        <ProgressBar
+            android:id="@+id/create_account_birthday_prrogress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:progressDrawable="@drawable/progress_bg"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0" />
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="ifContentScrolls"
+            app:layout_constraintBottom_toTopOf="@+id/ca_two_constrstion_In"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="76dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/TitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Basic information"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/TitleDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="Enter your birthday and gender"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyt_contain"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="false"
+                    android:hint="Day"
+                    android:outlineProvider="paddedBounds"
+                    android:textColorHint="?attr/colorControlNormal"
+                    android:visibility="visible"
+                    app:boxStrokeColor="?attr/colorSecondary"
+                    app:boxStrokeErrorColor="@color/white"
+                    app:boxStrokeWidth="0.5dp"
+                    app:boxStrokeWidthFocused="1.5dp"
+                    app:errorIconTint="@color/white"
+                    app:errorTextColor="@color/red"
+                    app:hintTextColor="?attr/colorSecondary"
+                    app:layout_constraintBottom_toBottomOf="0"
+                    app:layout_constraintEnd_toStartOf="@+id/lyt_month"
+                    app:layout_constraintStart_toStartOf="0"
+                    app:layout_constraintTop_toTopOf="0">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/lyt__contain"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="10dp"
+                            android:animateLayoutChanges="false"
+                            android:hint="Day"
+                            android:outlineProvider="paddedBounds"
+                            android:textColorHint="?attr/colorControlNormal"
+                            android:visibility="visible"
+                            app:boxStrokeColor="?attr/colorSecondary"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="0.5dp"
+                            app:boxStrokeWidthFocused="1.5dp"
+                            app:errorIconTint="@color/white"
+                            app:errorTextColor="@color/red"
+                            app:hintTextColor="?attr/colorSecondary"
+                            app:layout_constraintBottom_toBottomOf="0"
+                            app:layout_constraintEnd_toStartOf="@+id/lyt_month"
+                            app:layout_constraintStart_toStartOf="0"
+                            app:layout_constraintTop_toTopOf="0">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cursorVisible="true"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:maxLines="1"
+                                android:minWidth="80dp"
+                                android:selectAllOnFocus="true"
+                                android:textCursorDrawable="@drawable/cursor"
+                                app:textInputLayoutFocusedRectEnabled="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/lyt_month"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_alignParentTop="true"
+                            android:animateLayoutChanges="false"
+                            android:hint="Month"
+                            android:minWidth="120dp"
+                            android:outlineProvider="paddedBounds"
+                            android:textColorHint="?attr/colorControlNormal"
+                            android:visibility="visible"
+                            app:boxStrokeColor="?attr/colorSecondary"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="0.5dp"
+                            app:boxStrokeWidthFocused="1.5dp"
+                            app:endIconTint="?attr/colorControlNormal"
+                            app:errorIconTint="@color/white"
+                            app:errorTextColor="@color/red"
+                            app:hintTextColor="?attr/colorSecondary"
+                            app:layout_constraintBottom_toBottomOf="0"
+                            app:layout_constraintEnd_toStartOf="@+id/lyt_year"
+                            app:layout_constraintStart_toEndOf="@+id/lyt__contain"
+                            app:layout_constraintTop_toTopOf="0">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/edt_month"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:cursorVisible="true"
+                                android:gravity="center_vertical"
+                                android:imeOptions="actionNext"
+                                android:inputType="none"
+                                android:maxLines="1"
+                                android:minWidth="130dp"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@drawable/cursor" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/lyt_year"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="10dp"
+                            android:animateLayoutChanges="false"
+                            android:hint="Year"
+                            android:outlineProvider="paddedBounds"
+                            android:textColorHint="?attr/colorControlNormal"
+                            android:visibility="visible"
+                            app:boxStrokeColor="?attr/colorSecondary"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="0.5dp"
+                            app:boxStrokeWidthFocused="1.5dp"
+                            app:errorIconTint="@color/white"
+                            app:errorTextColor="@color/red"
+                            app:hintTextColor="?attr/colorSecondary"
+                            app:layout_constraintBottom_toBottomOf="0"
+                            app:layout_constraintEnd_toEndOf="0"
+                            app:layout_constraintStart_toEndOf="@+id/lyt_month"
+                            app:layout_constraintTop_toTopOf="0">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cursorVisible="true"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:maxLines="1"
+                                android:minWidth="100dp"
+                                android:overScrollMode="never"
+                                android:selectAllOnFocus="true"
+                                android:textCursorDrawable="@drawable/cursor"
+                                app:textInputLayoutFocusedRectEnabled="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyt_gender"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="false"
+                    android:hint="Gender"
+                    android:outlineProvider="paddedBounds"
+                    android:textColorHint="?attr/colorControlNormal"
+                    android:visibility="visible"
+                    app:boxStrokeColor="?attr/colorSecondary"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxStrokeWidth="0.5dp"
+                    app:boxStrokeWidthFocused="1.5dp"
+                    app:endIconTint="?attr/colorControlNormal"
+                    app:errorEnabled="true"
+                    app:errorIconTint="@color/white"
+                    app:errorTextColor="@color/red"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextColor="#ff0000"
+                    app:hintTextColor="?attr/colorSecondary"
+                    app:layout_constraintBottom_toBottomOf="0"
+                    app:layout_constraintEnd_toStartOf="@+id/textInputLayout3"
+                    app:layout_constraintStart_toEndOf="@+id/textInputLayout"
+                    app:layout_constraintTop_toTopOf="0">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edt_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cursorVisible="true"
+                        android:inputType="none"
+                        android:textCursorDrawable="@drawable/cursor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_error_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:text="  Please select your gender"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ca_two_constrstion_In"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toBottomOf="@+id/ScrollView">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_create_account_birthday_next"
+                style="@style/TextAppearance.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="21dp"
+                android:gravity="center"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="?attr/colorOnPrimary"
+                app:backgroundTint="?attr/colorSecondary"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintEnd_toEndOf="0"
+                app:layout_constraintTop_toTopOf="0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

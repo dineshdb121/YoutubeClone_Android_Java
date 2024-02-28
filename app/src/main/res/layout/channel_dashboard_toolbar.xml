@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tabs_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="?attr/colorOnPrimary"
+        android:elevation="0dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="visible"
+        app:collapseIcon="@drawable/arrow_back"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        app:subtitleTextAppearance="@style/TextAppearance.Material3.LabelSmall"
+        app:subtitleTextColor="@color/white"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/Toolbar_TitleText"
+        app:titleTextColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/search_back2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="14dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout9"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0"
+                app:srcCompat="@drawable/arrow_back" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:maxHeight="46dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintEnd_toEndOf="0"
+                app:layout_constraintStart_toEndOf="@+id/search_back2"
+                app:layout_constraintTop_toTopOf="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/channel_dash_tool_more"
+                    android:layout_width="46dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="0"
+                    app:layout_constraintEnd_toEndOf="0"
+                    app:layout_constraintTop_toTopOf="0">
+
+                    <ImageView
+                        android:id="@+id/tool_profile_menu"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="0"
+                        app:layout_constraintEnd_toEndOf="0"
+                        app:layout_constraintStart_toStartOf="0"
+                        app:layout_constraintTop_toTopOf="0"
+                        app:shapeAppearance="@style/roundimageview"
+                        app:srcCompat="@drawable/more" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/channel_dash_tool_search_contain"
+                    android:layout_width="46dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="0"
+                    app:layout_constraintEnd_toStartOf="@+id/channel_dash_tool_more"
+                    app:layout_constraintTop_toTopOf="0">
+
+                    <ImageView
+                        android:id="@+id/profile_close_imgview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="0"
+                        app:layout_constraintEnd_toEndOf="0"
+                        app:layout_constraintStart_toStartOf="0"
+                        app:layout_constraintTop_toTopOf="0"
+                        app:srcCompat="@drawable/search" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/channel_dash_tool_title"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="2dp"
+                    android:gravity="start|center_vertical"
+                    android:text="DK Tamil"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-light"
+                    app:layout_constraintBottom_toBottomOf="0"
+                    app:layout_constraintEnd_toStartOf="@+id/channel_dash_tool_search_contain"
+                    app:layout_constraintStart_toStartOf="0"
+                    app:layout_constraintTop_toTopOf="0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/transparent"
+        android:textColorHint="?attr/colorControlNormal"
+        app:boxStrokeColor="?attr/colorControlNormal"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="1dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:counterTextColor="?attr/colorControlNormal"
+        app:helperTextTextColor="?attr/colorControlNormal"
+        app:hintTextColor="?attr/colorControlNormal"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <EditText
+            android:id="@+id/edt_Title_Content_public"
+            style="@style/ThemeOverlay.Material3.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:background="?attr/colorOnPrimary"
+            android:cursorVisible="true"
+            android:fontFamily="@font/open_sans"
+            android:hint="Title.."
+            android:maxLength="100"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_publish"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0"
+        app:menu="@menu/publish_menu"
+        app:navigationIcon="@drawable/back"
+        app:title="Edit Content">
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:text="Edit Content"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tool_save_btn_publish"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SAVE"
+            android:textAllCaps="true"
+            android:textColor="?attr/colorSecondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintTop_toTopOf="0"
+            app:rippleColor="@color/greay" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_tool_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:gravity="end"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintTop_toTopOf="0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_publish">
+
+        <ImageView
+            android:id="@+id/thumbnail_publish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/thumb"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:srcCompat="@drawable/thumb" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/progress_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar_publish"
+                style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:progressDrawable="@drawable/custom_progress_bg"
+                android:progressTint="#cccccc"
+                android:secondaryProgressTint="#b26e6e6e"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintEnd_toEndOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0" />
+
+            <TextView
+                android:id="@+id/progress_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0%"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintEnd_toEndOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_edit_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#2a000000"
+            android:backgroundTint="#42cccccc"
+            android:foregroundGravity="center"
+            android:padding="10dp"
+            app:cardCornerRadius="45dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:foregroundGravity="center"
+                android:padding="10dp"
+                android:tint="?attr/colorOnPrimary"
+                app:srcCompat="@drawable/edit" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/edtViewTypeSelector"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edt_bg"
+        android:drawableStart="@drawable/private_icon"
+        android:drawableEnd="@drawable/expand"
+        android:editable="false"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="  UNLISTED "
+        android:textColor="?attr/colorControlNormal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout" />
+
+    <EditText
+        android:id="@+id/category_"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/publish_edtbg"
+        android:drawableStart="@drawable/category"
+        android:gravity="start|center_vertical"
+        android:hint="  Category"
+        android:padding="8dp"
+        android:paddingStart="10dp"
+        android:textColor="?attr/colorControlNormal"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toEndOf="@+id/edtViewTypeSelector"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout" />
+
+    <Button
+        android:id="@+id/btn_viewType_Selector"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/publish_edtbg"
+        app:backgroundTint="#858585"
+        app:layout_constraintEnd_toStartOf="@+id/category_"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/statusbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/statusbar_dark"
+    android:maxHeight="24dp">
+
+    <TextView
+        android:id="@+id/statusbar_text"
+        style="@style/Widget.MaterialComponents.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="top|center_horizontal"
+        android:text="No connection"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <View
+        android:id="@+id/cptt_view_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_gravity="top"
+        android:background="#349a9a9a"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cptt_fab_container"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/cptt_view_horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cptt_fab"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:clickable="true"
+            app:fabSize="1"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0"
+            app:srcCompat="@drawable/done" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/cptt_view_vertical"
+        android:layout_width="1.2dp"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#349a9a9a"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toStartOf="@+id/cptt_fab_container"
+        app:layout_constraintTop_toTopOf="0" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="0dp"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toStartOf="@+id/cptt_view_vertical"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:scrollbarSize="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/cp_add_audio"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/title_size"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="Size"
+                    android:textOn="Size"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/cpt_bold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/title_bold"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="Add Title"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="Bold"
+                    android:textOn="Bold"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/cp_add_desc"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/color"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="Color"
+                    android:textOn="Color"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/cp_add_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/italic"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="Italic"
+                    android:textOn="Italic"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/cp_add_video"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/align_left"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="Align left"
+                    android:textOn="Align left"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/cp_add_gif"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/align_center"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="Align center"
+                    android:textOn="Align center"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/cp_add_code"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/align_right"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="Align right"
+                    android:textOn="Align right"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/cp_add_file"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/add_file"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="File"
+                    android:textOn="File"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/add_apk"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/add_apk_file"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="Apk"
+                    android:textOn="Apk"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/colorOnPrimary"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <ToggleButton
+                    android:id="@+id/add_folder"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorOnPrimary"
+                    android:drawableTop="@drawable/add_folder"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="Add Title"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textOff="Folder"
+                    android:textOn="Folder"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

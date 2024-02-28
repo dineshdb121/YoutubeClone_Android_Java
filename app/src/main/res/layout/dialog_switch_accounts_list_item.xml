@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="0dp"
+    app:cardBackgroundColor="?attr/colorOnPrimary"
+    app:cardElevation="0dp"
+    app:cardMaxElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0">
+
+        <TextView
+            android:id="@+id/dsali_mailId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="dineshkumar@dmail.com"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:fontFamily="@font/open_sans_semibold"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toBottomOf="@+id/dsali_mailId">
+
+            <TextView
+                android:id="@+id/dsalia_subcribers_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="1230 subcribers"
+                android:textColor="?attr/colorControlNormal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintEnd_toEndOf="0"
+                app:layout_constraintStart_toEndOf="@+id/dsali_imageview"
+                app:layout_constraintTop_toBottomOf="@+id/dsalia_name_inside" />
+
+            <TextView
+                android:id="@+id/dsalia_name_inside"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="DK Tamil"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/dsalia_subcribers_count"
+                app:layout_constraintEnd_toEndOf="0"
+                app:layout_constraintStart_toEndOf="@+id/dsali_imageview"
+                app:layout_constraintTop_toTopOf="0" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/dsali_imageview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/dktimg"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0"
+                app:shapeAppearance="@style/roundimageview"
+                app:strokeWidth="0.5dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

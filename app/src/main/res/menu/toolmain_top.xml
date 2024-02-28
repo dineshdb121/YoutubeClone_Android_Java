@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_toltop"
+        android:icon="@drawable/search"
+        android:title="TODO"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/searchView_Top"
+        android:actionLayout="@layout/custom_toolbar"
+        android:title="TODO"
+        app:showAsAction="always" />
+</menu>

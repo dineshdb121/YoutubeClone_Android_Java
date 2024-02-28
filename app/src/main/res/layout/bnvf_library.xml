@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0"
+        app:menu="@menu/tollmain_top" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_dowanlodes"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="10sp"
+        android:padding="2sp"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/history_layout">
+
+        <ImageView
+            android:id="@+id/item2_img"
+            android:layout_width="26sp"
+            android:layout_height="26sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:duplicateParentState="false"
+            android:foregroundGravity="center"
+            android:src="@drawable/dowanlode" />
+
+        <TextView
+            android:id="@+id/item2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/item2_img"
+            android:text="Downloads"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item2_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item2_tv"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="7dp"
+            android:layout_toEndOf="@+id/item2_img"
+            android:text="10 Notes"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/your_notes"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:padding="2sp"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout_dowanlodes">
+
+        <ImageView
+            android:id="@+id/item1_img"
+            android:layout_width="26sp"
+            android:layout_height="26sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:duplicateParentState="false"
+            android:foregroundGravity="center"
+            android:src="@drawable/notes"
+            android:tint="#000000" />
+
+        <TextView
+            android:id="@+id/item1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_toEndOf="@+id/item1_img"
+            android:text="Your Notes"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/history_layout"
+        android:layout_width="match_parent"
+        android:layout_height="180sp"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:foregroundGravity="center"
+            android:padding="2sp"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0">
+
+            <ImageView
+                android:id="@+id/item3_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp"
+                android:duplicateParentState="false"
+                android:src="@drawable/history"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0" />
+
+            <TextView
+                android:id="@+id/item3_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="14dp"
+                android:layout_toEndOf="@+id/item3_img"
+                android:text="History"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintStart_toEndOf="@+id/item3_img"
+                app:layout_constraintTop_toTopOf="0" />
+
+            <TextView
+                android:id="@+id/viewall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="VIEW ALL"
+                android:textColor="#00a5ff"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="0"
+                app:layout_constraintEnd_toEndOf="0"
+                app:layout_constraintTop_toTopOf="0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toBottomOf="@+id/history" />
+
+        <View
+            android:id="@+id/divider_history"
+            android:layout_width="match_parent"
+            android:layout_height="0.1sp"
+            android:layout_marginStart="15sp"
+            android:layout_marginEnd="15sp"
+            android:background="#bf808080"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

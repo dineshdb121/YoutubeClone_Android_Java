@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/public_menu"
+        android:icon="@drawable/public_icon"
+        android:title="PUBLIC" />
+    <item
+        android:id="@+id/unlisted_menu"
+        android:title="UNLISTED" />
+    <item
+        android:id="@+id/private_menu"
+        android:icon="@drawable/private_icon"
+        android:title="PRIVATE" />
+</menu>
