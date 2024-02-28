@@ -12,7 +12,7 @@ any aother application interfaces Anthis the project Which has powered by Fireba
 Own web commumication inerface 
 
 # Now We can see about its Features and Functionality
-SplashScreen => https://images.app.goo.gl/ixDezRxhFrfKgTUH9
+SplashScreen => 
 
 
 
