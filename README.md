@@ -1,5 +1,8 @@
+![20240301_200935](https://github.com/dineshdb121/YoutubeClone_Android_Java/assets/70446268/8759563a-87a2-475c-b869-5c70a574dfae)
+
+
 # This is a  project which is the YoutubeClone 
-![repository-open-graph-template](https://github.com/dineshdb121/YoutubeClone_Android_Java/assets/70446268/59e11960-4ed0-4580-9322-4069b3859af6)
+
 
 which has has the functionalitys like 
 Account Creation account login and signup in the account management we can abe to switch betwen account without having 
